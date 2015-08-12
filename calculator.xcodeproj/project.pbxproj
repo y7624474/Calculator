@@ -14,6 +14,7 @@
 		4972CD371B79D60000440AC1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4972CD361B79D60000440AC1 /* Images.xcassets */; };
 		4972CD3A1B79D60000440AC1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4972CD381B79D60000440AC1 /* LaunchScreen.xib */; };
 		4972CD461B79D60000440AC1 /* calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4972CD451B79D60000440AC1 /* calculatorTests.m */; };
+		4972CD571B79F47400440AC1 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4972CD561B79F47400440AC1 /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		4972CD3F1B79D60000440AC1 /* calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4972CD441B79D60000440AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4972CD451B79D60000440AC1 /* calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorTests.m; sourceTree = "<group>"; };
+		4972CD551B79F47400440AC1 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		4972CD561B79F47400440AC1 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		4972CD281B79D60000440AC1 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				4972CD551B79F47400440AC1 /* Calculator.h */,
+				4972CD561B79F47400440AC1 /* Calculator.m */,
 				4972CD2D1B79D60000440AC1 /* AppDelegate.h */,
 				4972CD2E1B79D60000440AC1 /* AppDelegate.m */,
 				4972CD301B79D60000440AC1 /* ViewController.h */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4972CD321B79D60000440AC1 /* ViewController.m in Sources */,
+				4972CD571B79F47400440AC1 /* Calculator.m in Sources */,
 				4972CD2F1B79D60000440AC1 /* AppDelegate.m in Sources */,
 				4972CD2C1B79D60000440AC1 /* main.m in Sources */,
 			);

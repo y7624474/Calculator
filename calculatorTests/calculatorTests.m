@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "Calculator.h"
+#import "Calculator+Sqrt.h"
+
 @interface calculatorTests : XCTestCase
 {
     Calculator *cal;
@@ -19,7 +20,7 @@
 
 - (void)setUp {
     [super setUp];
-    cal=[Calculator new];
+    cal=[Calculator getInstance];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -30,21 +31,47 @@
 
 - (void)testAdd {
     // This is an example of a functional test case.
-    int result=[cal Add:1 second:2];
+    float result=[cal Add:1 With:2];
     XCTAssertEqual(result,3);
 }
 
 - (void)testSub {
     // This is an example of a functional test case.
-    int result=[cal Sub:4 second:1] ;
-    XCTAssertEqual(result, 3,@"3");
+    float result=[cal Sub:4 By:1] ;
+    XCTAssertEqual(result, 3,@"Sub fail");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)testreAdd {
+    // This is an example of a functional test case.
+    float result=[cal reAdd:4] ;
+    XCTAssertEqual(result, 7,@"reAdd fail");
 }
+
+
+-(void)testreMultWithAdd {
+    // This is an example of a functional test case.
+    [cal Add:3 With:1];
+    float result=[cal reMult:3] ;
+    XCTAssertEqual(result, 12,@"reMult fail");
+}
+
+-(void)testreSqrt {
+    // This is an example of a functional test case.
+    [cal Add:3 With:1];
+    float result=[cal reSqrt] ;
+    XCTAssertEqual(result, 2,@"reMult fail");
+}
+
+-(void)testSqrt {
+    // This is an example of a functional test case.
+    float result=[cal Sqrt:9] ;
+    XCTAssertEqual(result, 3,@"reMult fail");
+}
+
+-(void)testGetInstance{
+    Calculator *testcal=[Calculator getInstance];
+    XCTAssertEqual(cal, testcal,@"getinstance fail");
+}
+
 
 @end

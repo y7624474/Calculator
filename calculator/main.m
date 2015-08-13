@@ -9,16 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "calculator.h"
-int main(int argc, char * argv[]) {
-    Calculator *cal=[Calculator new];
+#import "Calculator+Sqrt.h"
 
-    cal.temp_register=[cal Add:1 second:2];
-    cal.temp_register=[cal Mult:2 second:cal.temp_register];
-    cal.temp_register=[cal Sub:cal.temp_register second:2];
+int main(int argc, char * argv[]) {
+  
+    Calculator *cal=[Calculator getInstance];
     
-    int result=[cal reAdd:2];
+    [cal Add:1 With:2];
+    [cal reMult:2];
+    [cal reSub:2];
     
-    NSLog(@"the result is %d",result);
+    float result=[cal reSqrt];
+   
+    
+    NSLog(@"the result is %.2f",result);
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

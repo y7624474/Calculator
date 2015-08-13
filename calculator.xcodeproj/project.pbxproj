@@ -15,6 +15,8 @@
 		4972CD3A1B79D60000440AC1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4972CD381B79D60000440AC1 /* LaunchScreen.xib */; };
 		4972CD461B79D60000440AC1 /* calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4972CD451B79D60000440AC1 /* calculatorTests.m */; };
 		4972CD571B79F47400440AC1 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4972CD561B79F47400440AC1 /* Calculator.m */; };
+		49DE592B1B7C407400D4941F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE592A1B7C407400D4941F /* Callback.m */; };
+		49ECB3841B7B1B9E00FBB836 /* Calculator+Sqrt.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ECB3831B7B1B9E00FBB836 /* Calculator+Sqrt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		4972CD451B79D60000440AC1 /* calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorTests.m; sourceTree = "<group>"; };
 		4972CD551B79F47400440AC1 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		4972CD561B79F47400440AC1 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		49DE59291B7C2B9A00D4941F /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Callback.h; path = ../Callback.h; sourceTree = "<group>"; };
+		49DE592A1B7C407400D4941F /* Callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Callback.m; sourceTree = "<group>"; };
+		49ECB3821B7B1B9E00FBB836 /* Calculator+Sqrt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Calculator+Sqrt.h"; sourceTree = "<group>"; };
+		49ECB3831B7B1B9E00FBB836 /* Calculator+Sqrt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Calculator+Sqrt.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,11 @@
 		4972CD281B79D60000440AC1 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				49DE592A1B7C407400D4941F /* Callback.m */,
+				49DE59291B7C2B9A00D4941F /* Callback.h */,
 				4972CD551B79F47400440AC1 /* Calculator.h */,
+				49ECB3821B7B1B9E00FBB836 /* Calculator+Sqrt.h */,
+				49ECB3831B7B1B9E00FBB836 /* Calculator+Sqrt.m */,
 				4972CD561B79F47400440AC1 /* Calculator.m */,
 				4972CD2D1B79D60000440AC1 /* AppDelegate.h */,
 				4972CD2E1B79D60000440AC1 /* AppDelegate.m */,
@@ -224,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DE592B1B7C407400D4941F /* Callback.m in Sources */,
 				4972CD321B79D60000440AC1 /* ViewController.m in Sources */,
+				49ECB3841B7B1B9E00FBB836 /* Calculator+Sqrt.m in Sources */,
 				4972CD571B79F47400440AC1 /* Calculator.m in Sources */,
 				4972CD2F1B79D60000440AC1 /* AppDelegate.m in Sources */,
 				4972CD2C1B79D60000440AC1 /* main.m in Sources */,
@@ -424,6 +436,7 @@
 				4972CD4B1B79D60000440AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4972CD4C1B79D60000440AC1 /* Build configuration list for PBXNativeTarget "calculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +445,7 @@
 				4972CD4E1B79D60000440AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

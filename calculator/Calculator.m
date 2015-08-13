@@ -8,29 +8,82 @@
 
 #import "Calculator.h"
 
-@implementation Calculator
+static Calculator *cal=nil;
 
--(int)Add:(int)a second: (int)b
-{
-    int re=a+b;
-    return re;
+@implementation Calculator 
+
++ (Calculator *)getInstance {
+    
+    @synchronized(self) {
+        if (cal == nil) {
+            cal = [[Calculator alloc] init];
+        }
+    }
+    
+    return cal;
 }
 
--(int)Sub:(int)a second:(int)b
+
+
+
+
+-(float)Add:(float) first With: (float) second
 {
-    int re=a-b;
-    return re;
+    self.temp_register=first+second;
+    Callback *call=[Callback new];
+    [call callBackParameter:first];
+//    [self callBackParameter:first];
+    return self.temp_register;
 }
 
--(int)Mult:(int)a second:(int)b
+-(float)Sub:(float)first By:(float)second
 {
-    int re=a*b;
-    return re;
+    self.temp_register=first-second;
+   
+    return self.temp_register;
 }
 
--(int)reAdd:(int)a
+-(float)Mult:(float) first With: (float) second
 {
-    int re=a+self.temp_register;
-    return re;
+    self.temp_register=first*second;
+    
+    return self.temp_register;
 }
+
+-(float)Div:(float)first By:(float)second
+{
+    self.temp_register=first/second;
+  
+    return self.temp_register;
+}
+
+-(float)reAdd:(float)regist
+{
+   self.temp_register=regist+self.temp_register;
+    
+    return self.temp_register;
+}
+
+-(float)reSub:(float)regist
+{
+    self.temp_register=self.temp_register-regist;
+    
+    return self.temp_register;
+}
+
+-(float)reDiv:(float)regist
+{
+    self.temp_register=self.temp_register/regist;
+   
+    return self.temp_register;
+}
+
+-(float)reMult:(float)regist
+{
+    self.temp_register=self.temp_register*regist;
+
+    return self.temp_register;
+}
+
+
 @end

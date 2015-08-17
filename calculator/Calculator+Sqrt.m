@@ -16,10 +16,10 @@
 //    return bsqrt(regist);
 //}
 
--(float)Blocksqrt:(sqrt_block) registblock With: (float) regist
+-(float)Blocksqrt:(sqrt_block) registblock
 {
-    
-    return registblock(regist);
+    registblock();
+    return [self reSqrt];
 }
 
 -(float)reSqrt

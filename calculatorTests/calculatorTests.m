@@ -100,9 +100,10 @@
 }
 
 -(void)testSqrtBlock{
-    float result=[cal Blocksqrt:^float(float f) {
-        return sqrtf(f);
-    } With:16];
+    [cal Add:1 With:15];
+    float result=[cal Blocksqrt:^() {
+        NSLog(@"block sqrt");
+    }];
     XCTAssertEqual(result, 4,@"block fail");
 }
 

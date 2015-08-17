@@ -9,9 +9,17 @@
 #import "Calculator+Sqrt.h"
 
 @implementation Calculator (Sqrt)
--(float)Sqrt:(float) regist
+//sqrt_block bsqrt=^(float f){return sqrtf(f);};
+//
+//-(float)Blocksqrt:(float)regist
+//{
+//    return bsqrt(regist);
+//}
+
+-(float)Blocksqrt:(sqrt_block) registblock With: (float) regist
 {
-    return sqrtf(regist);
+    
+    return registblock(regist);
 }
 
 -(float)reSqrt

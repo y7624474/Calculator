@@ -11,7 +11,7 @@
 static Calculator *cal=nil;
 
 @implementation Calculator 
-
+//callback.delegate = self;
 + (Calculator *)getInstance {
     
     @synchronized(self) {
@@ -19,19 +19,16 @@ static Calculator *cal=nil;
             cal = [[Calculator alloc] init];
         }
     }
-    
+
     return cal;
 }
-
-
-
 
 
 -(float)Add:(float) first With: (float) second
 {
     self.temp_register=first+second;
-    Callback *call=[Callback new];
-    [call callBackParameter:first];
+    [self.delegate BackWithParameter:first And:second type:ADD];
+ 
 //    [self callBackParameter:first];
     return self.temp_register;
 }
@@ -39,21 +36,21 @@ static Calculator *cal=nil;
 -(float)Sub:(float)first By:(float)second
 {
     self.temp_register=first-second;
-   
+    [self.delegate BackWithParameter:first And:second type:SUB];
     return self.temp_register;
 }
 
 -(float)Mult:(float) first With: (float) second
 {
     self.temp_register=first*second;
-    
+    [self.delegate BackWithParameter:first And:second type:MULT];
     return self.temp_register;
 }
 
 -(float)Div:(float)first By:(float)second
 {
     self.temp_register=first/second;
-  
+    [self.delegate BackWithParameter:first And:second type:DIV];
     return self.temp_register;
 }
 
@@ -85,5 +82,9 @@ static Calculator *cal=nil;
     return self.temp_register;
 }
 
+
+
+
+    
 
 @end

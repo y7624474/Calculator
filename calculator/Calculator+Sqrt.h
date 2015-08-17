@@ -9,6 +9,11 @@
 #import "calculator.h"
 
 @interface Calculator (Sqrt)
--(float)Sqrt:(float) regist;
+typedef float(^sqrt_block)(float f);
+
+//@property sqrt_block ss;
+-(float)Blocksqrt:(sqrt_block) registblock With: (float) regist ;
+
+//-(float)Blocksqrt:(float) regist;
 -(float)reSqrt;
 @end

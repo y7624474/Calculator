@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Callback.h"
+#import "CallbackDelegate.h"
 
 
 @interface Calculator : NSObject
@@ -15,6 +15,8 @@
 +(Calculator*)getInstance;
 
 @property float temp_register;
+
+@property id <CalculatorDelegate> delegate;
 
 -(float)Add:(float) first With: (float) second;
 -(float)Sub:(float) first By: (float) second;
@@ -25,6 +27,7 @@
 -(float)reMult:(float)regist;
 -(float)reDiv:(float)regist;
 
+enum Body{AB=10,CD,EF,HG};
 //-(void)init;
 @end
 

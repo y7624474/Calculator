@@ -14,13 +14,16 @@
 int main(int argc, char * argv[]) {
   
     Calculator *cal=[Calculator getInstance];
-    
+    cal.delegate = [CallbackDelegate new];
     [cal Add:1 With:2];
+    [cal Sub:4 By:1];
     [cal reMult:2];
     [cal reSub:2];
     
-    float result=[cal reSqrt];
-   
+    float result=[cal Blocksqrt:^float(float f) {
+        return sqrtf(f);
+    } With:16];
+    
     
     NSLog(@"the result is %.2f",result);
     @autoreleasepool {
